@@ -55,14 +55,56 @@ const user = [
 
 //console.log(user[1].email)
 
-console.log(fbUser)
+//console.log(fbUser)
 //console.log(Object.keys(fbUser))
 // return all keys present in object 
 
 //console.log(Object.values(fbUser))
 // return all value presnt in object 
 
-console.log(Object.entries(fbUser))
+//console.log(Object.entries(fbUser))
 
-console.log(fbUser.hasOwnProperty("email"))
+//console.log(fbUser.hasOwnProperty("email"))
 // it check the given key is present or not and return the boolean output (true or false )
+
+
+// destructuring the object 
+
+const course = {
+    coursename : "bcom",
+    price : "999",
+    courseteacher : "aman",
+}
+
+//course.courseteacher
+
+const {courseteacher : teacher } = course
+console.log(teacher)
+
+
+// now we talk about API
+/* An API, or Application Programming Interface, is a set of rules that allows different
+ software applications to communicate and share data with each other
+ */
+
+// it return data in json format .
+// so this is a json format just like a object but not proper object 
+// in json the key and value both are string 
+
+/*
+{
+    "name" : "aman",
+    "coures" : "bcom",
+    "price" : "free"
+}
+*/
+
+
+// some time api show in array format 
+/*
+[
+    {},
+    {},
+    {}
+]
+*/
