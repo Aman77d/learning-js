@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai or code</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    <ul>
+        <li class="language">JavaScript</li>
+    </ul>
+</body>
+<script>
+
+//this is a method to create element with basic function 
+// but this is not optimised way to add values 
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typeScript")
+
+// this is a optimised approach of cretayion of element with the help of functions in js
+// and it is also used in large project and companies 
+function addOptiLanguage(addLang){
+    const li = document.createElement('li')
+    
+    //this is also way to create textNode 
+    /*
+    const addText = document.createTextNode(addLang)
+    li.appendChild(addText)
+    */
+
+    // it is a short way to do similar cretation of textNode 
+    li.appendChild(document.createTextNode(addLang))
+    document.querySelector('.language').appendChild(li)
+}
+addOptiLanguage("Java")
+
+// now we are trying to edit any language like this 
+const secondVal = document.querySelector("li:nth-child(2)")
+console.log(secondVal);
+
+//secondVal.innerHTML = "c++"
+const newLi = document.createElement('li')
+newLi.textContent = "SQL"
+secondVal.replaceWith(newLi)
+
+//another way to edit a language 
+/*
+const firstVal = document.querySelector("li:first-child")
+firstVal.outerHTML = '<li>typeScript</li>'
+*/
+
+// now we are removing a element 
+/*
+const removeval = document.querySelector("li:last-child");
+removeval.remove()
+/*
+
+
+
+
+</script>
+</html>
